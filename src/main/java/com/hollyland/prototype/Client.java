@@ -6,6 +6,7 @@ package com.hollyland.prototype;
  * 3.总是需要重新初始化对象，而不是动态地获得对象运行时地状态，不够灵活
  * 4.改进思路：Java中Object类是所有类地根类，Object类提供了一个clone（）方法，该方法可以将一个Java对象复制一份，但是需要实现clone地Java类必须要实现一个接口Cloneable
  * 该接口表示该类能够复制且具有复制能力 =》 原型模式
+ * @author lesuto
  */
 public class Client {
 
