@@ -3,15 +3,14 @@ package com.hollyland.adapter.interfaceadapter;
 public class Client {
 	public static void main(String[] args) {
 		
-		AbsAdapter absAdapter = new AbsAdapter() {
-			//ֻ��Ҫȥ�������� ��Ҫʹ�� �ӿڷ���
+		AbstractAdapter abstractAdapter = new AbstractAdapter() {
 			@Override
 			public void m1() {
 				// TODO Auto-generated method stub
-				System.out.println("ʹ����m1�ķ���");
+				System.out.println("使用了m1的方法");
 			}
 		};
 		
-		absAdapter.m1();
+		abstractAdapter.m1();
 	}
 }
