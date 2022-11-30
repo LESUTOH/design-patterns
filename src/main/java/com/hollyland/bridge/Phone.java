@@ -1,11 +1,15 @@
 package com.hollyland.bridge;
 
 public abstract class Phone {
-	
-	//���Ʒ��
+	/**
+	 * 组合品牌
+	 */
 	private Brand brand;
 
-	//������
+	/**
+	 * 构造器
+	 * @param brand
+	 */
 	public Phone(Brand brand) {
 		super();
 		this.brand = brand;

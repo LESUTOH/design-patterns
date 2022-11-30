@@ -1,6 +1,9 @@
 package com.hollyland.bridge;
 
-//�ӿ�
+/**
+ * 接口
+ * @author lesuto
+ */
 public interface Brand {
 	void open();
 	void close();
