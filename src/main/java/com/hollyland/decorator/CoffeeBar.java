@@ -1,47 +1,50 @@
 package com.hollyland.decorator;
 
+/**
+ * @author lesuto
+ */
 public class CoffeeBar {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		// װ����ģʽ�µĶ�����2���ɿ���+һ��ţ�̵�LongBlack
+		// 装饰着模式下的订单：2份巧克力+一份牛奶的LongBlack
 
-		// 1. ��һ�� LongBlack
+		// 1. 点一份 LongBlack
 		Drink order = new LongBlack();
-		System.out.println("����1=" + order.cost());
-		System.out.println("����=" + order.getDes());
+		System.out.println("费用1=" + order.cost());
+		System.out.println("描述=" + order.getDes());
 
-		// 2. order ����һ��ţ��
+		// 2. order 加入一份牛奶
 		order = new Milk(order);
 
-		System.out.println("order ����һ��ţ�� ���� =" + order.cost());
-		System.out.println("order ����һ��ţ�� ���� = " + order.getDes());
+		System.out.println("order 加入一份牛奶 费用 =" + order.cost());
+		System.out.println("order 加入一份牛奶 描述 = " + order.getDes());
 
-		// 3. order ����һ���ɿ���
-
-		order = new Chocolate(order);
-
-		System.out.println("order ����һ��ţ�� ����һ���ɿ���  ���� =" + order.cost());
-		System.out.println("order ����һ��ţ�� ����һ���ɿ��� ���� = " + order.getDes());
-
-		// 3. order ����һ���ɿ���
+		// 3. order 加入一份巧克力
 
 		order = new Chocolate(order);
 
-		System.out.println("order ����һ��ţ�� ����2���ɿ���   ���� =" + order.cost());
-		System.out.println("order ����һ��ţ�� ����2���ɿ��� ���� = " + order.getDes());
+		System.out.println("order 加入一份牛奶 加入一份巧克力 费用 =" + order.cost());
+		System.out.println("order 加入一份牛奶 加入一份巧克力 描述 = " + order.getDes());
+
+		// 3. order 加入一份巧克力
+
+		order = new Chocolate(order);
+
+		System.out.println("order 加入一份牛奶 加入2份巧克力 费用 =" + order.cost());
+		System.out.println("order 加入一份牛奶 加入2份巧克力 描述 = " + order.getDes());
 	
 		System.out.println("===========================");
 		
 		Drink order2 = new DeCaf();
 		
-		System.out.println("order2 ���򿧷�  ���� =" + order2.cost());
-		System.out.println("order2 ���򿧷� ���� = " + order2.getDes());
+		System.out.println("order2 无因咖啡 费用 =" + order2.cost());
+		System.out.println("order2 无因咖啡 描述 = " + order2.getDes());
 		
 		order2 = new Milk(order2);
 		
-		System.out.println("order2 ���򿧷� ����һ��ţ��  ���� =" + order2.cost());
-		System.out.println("order2 ���򿧷� ����һ��ţ�� ���� = " + order2.getDes());
+		System.out.println("order2 无因咖啡 加入一份牛奶 费用 =" + order2.cost());
+		System.out.println("order2 无因咖啡 加入一份牛奶 描述 = " + order2.getDes());
 
 	
 	}

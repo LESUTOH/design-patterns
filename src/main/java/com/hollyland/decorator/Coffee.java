@@ -1,6 +1,9 @@
 package com.hollyland.decorator;
 
-public class Coffee  extends Drink {
+/**
+ * @author lesuto
+ */
+public class Coffee extends Drink {
 
 	@Override
 	public float cost() {
