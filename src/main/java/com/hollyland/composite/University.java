@@ -3,25 +3,25 @@ package com.hollyland.composite;
 import java.util.ArrayList;
 import java.util.List;
 
-//University ���� Composite , ���Թ���College
+/**
+ * University 就是 Composite，可以管理College
+ * @author lesuto
+ */
 public class University extends OrganizationComponent {
 
 	List<OrganizationComponent> organizationComponents = new ArrayList<OrganizationComponent>();
 
-	// ������
 	public University(String name, String des) {
 		super(name, des);
 		// TODO Auto-generated constructor stub
 	}
 
-	// ��дadd
 	@Override
 	protected void add(OrganizationComponent organizationComponent) {
 		// TODO Auto-generated method stub
 		organizationComponents.add(organizationComponent);
 	}
 
-	// ��дremove
 	@Override
 	protected void remove(OrganizationComponent organizationComponent) {
 		// TODO Auto-generated method stub
@@ -40,7 +40,6 @@ public class University extends OrganizationComponent {
 		return super.getDes();
 	}
 
-	// print�������������University ������ѧԺ
 	@Override
 	protected void print() {
 		// TODO Auto-generated method stub

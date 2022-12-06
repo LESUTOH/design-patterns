@@ -1,17 +1,14 @@
 package com.hollyland.composite;
 
+/**
+ * @author lesuto
+ */
 public class Department extends OrganizationComponent {
 
-	//û�м���
-	
 	public Department(String name, String des) {
 		super(name, des);
 		// TODO Auto-generated constructor stub
 	}
-
-	
-	//add , remove �Ͳ���д�ˣ���Ϊ����Ҷ�ӽڵ�
-	
 	@Override
 	public String getName() {
 		// TODO Auto-generated method stub
